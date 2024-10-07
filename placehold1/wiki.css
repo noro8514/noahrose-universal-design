@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Roboto&display=swap');
 
 body{
-    background: #88FF9F;
+    color: #E2DFEB;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
-    color:#3A1B08;
+    background:#1F4506;
 }
 
 .container{
@@ -48,7 +48,7 @@ nav ul li a{
 }
 
 nav ul li a:link{
-    color:blue;
+    color:#58E0F5;
 }
 
 nav ul li a:visited{
@@ -71,7 +71,7 @@ section p a{
 }
 
 section p a:link{
-    color:blue;
+    color:#58E0F5;
 }
 
 section p a:visited{
