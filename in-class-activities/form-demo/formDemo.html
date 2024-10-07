@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="formDemo.css" rel="stylesheet">
+    <title>Form Demo</title>
+</head>
+<body>
+    <header><h1>Accessible Forms</h1></header>
+    <main>
+        <form id="myForm" method="post">
+            <fieldset>
+                <legend>Give us your information!</legend>
+                <label for="username">
+                    What is your name?
+                    <input type="text" id="username" placeholder="First Last" required>
+                </label>
+
+                <label for="email">
+                    What is your email address?
+                    <input type="email" id="email">
+                </label>
+
+                <label for="website">
+                    What is your website?
+                    <input type="url" id="website" placeholder="http://www.website.com">
+                </label>
+
+                <label for="phone">
+                    What is your phone number?
+                    <input type="tel" id="phone" minlength="10" placeholder="555-555-5555">
+                </label>
+
+                <label for="age">
+                    How old are you?
+                    <input type="number" id="age" placeholder="35">
+                </label>
+
+                <label for="password">
+                    What is your password?
+                    <input type="text" id="password" maxlength="20" minlength="5" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+!=]).*" required>
+                    <ul class="inputRequirements">
+                        <li>Must be at least 5 characters and contain uppercase, lowercase, number, and symbol</li>
+                    </ul>
+                </label>
+
+                <input type="submit">
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
