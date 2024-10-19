@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="formDemo.css" rel="stylesheet">
     <title>Form Demo</title>
+    <style>
+        table, th, td{
+            border-collapse: collapse;
+        }
+        td{
+            border-collapse: collapse;
+            border: 2px solid red;
+        }
+        td{
+            padding-right: 50px;
+        }
+
+    </style>
 </head>
 <body>
     <header><h1>Accessible Forms</h1></header>
     <main>
+        <section>
+            <h2>Form</h2>
         <form id="myForm" method="post">
             <fieldset>
                 <legend>Give us your information!</legend>
@@ -48,6 +63,30 @@
                 <input type="submit">
             </fieldset>
         </form>
+        </section>
+        <section>
+            <h2>Table</h2>
+            <caption>Animals that can kill you</caption>
+            <thead>
+                <tr>
+                    <th scope = "col">Lions</th>
+                    <th scope = "col">Tigers</th>
+                    <th scope = "col">Bears</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Simba</td>
+                    <td>Tigger</td>
+                    <td>Winney</td>
+                </tr>
+                <tr>
+                    <td>Cecil</td>
+                    <td>Tygra</td>
+                    <td>Baloo</td>
+                </tr>
+            </tbody>
+        </section>
     </main>
 </body>
 </html>
