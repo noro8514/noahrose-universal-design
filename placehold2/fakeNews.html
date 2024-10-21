@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="fakeNews.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chevron_right,home" />
+    <style>
+        table, th, td{
+            border-collapse: collapse;
+        }
+        td{
+            border-collapse: collapse;
+            border: 2px solid red;
+        }
+        td{
+            padding-right: 50px;
+        }
+    </style>
+    <title>UD Assignment 2</title>
+</head>
+<body>
+        <a class="skip-link" href="#two">Skip to main content</a>
+    <header>
+        <h1>Fake News</h1>
+        <time datetime="2024-10-20">October 20, 2024</time>
+    </header>
+    <nav>
+        <ul>
+            <li><span aria-hidden="true" class="material-symbols-outlined">home</span><a href="../index.html">Home</a></li>
+            <li><span aria-hidden="true" class="material-symbols-outlined">chevron_right</span><a href="#two">Intro</a></li>
+            <li><span aria-hidden="true" class="material-symbols-outlined">chevron_right</span><a href="#three">Fonts</a></li>
+            <li><span aria-hidden="true" class="material-symbols-outlined">chevron_right</span><a href="#four">Wrap Up</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="two">
+            <h2>Introduction</h2>
+            <p>Now, I know what you're thinking. You're probably expecting some copy and pasted wikipedia article like the previous assignment. Well, quite frankly, I thought that was <em>really</em> boring. So instead I have decided to write an entire article from scratch. That way, I can add specific HTML5 elements as I see fit, and not need to actually read an article to decided were I want to add something like a <mark>Mark</mark>. I mean, come on, how many wikipedia articles actually use a mark. It's not to say it isn't important, but I didn't feel like scrolling through random wikipedia articles looking for one</p>
+        
+            <p>This begs the question, what is the point of this article? I mean, typing out an entirely custom article to meeting 1.5 page length requirement is going to take a lot more effort than it's worth right? Well... yes, yes it will, and yes it did. Writing the article this way took a <strong>long</strong> time, but in my head it was really funny. I've made a lot of revelations while writing this article, and developed a newfound hatred for Google Icons. A hatred so deep that I dedicated an entire section of this article to it. More on that later.</p>
+
+            <p>The last reason why I decided to write the article from scratch was because research is boring, and I don't feel like doing math. With a custom article titled "Fake News", I can simply make up random numbers on the spot with no modicum of reason and it would fit the narrative. For example, did you know 90% of graders that read this article would give it full points assuming it passed the validator? That may not be true, but it doesn't really need to be to get the point across. Here, I've provided my findings here:</p>
+
+            <table>
+            <caption><strong> Real and Not Made Up Grade Statistics</strong></caption>
+            <thead>
+                <tr>
+                    <th scope = "col">Grader</th>
+                    <th scope = "col">Grade</th>
+                    <th scope = "col">Likelihood</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>You</td>
+                    <td>100%</td>
+                    <td>90%</td>
+                </tr>
+                <tr>
+                    <td>My Ego</td>
+                    <td>110%</td>
+                    <td>100%</td>
+                </tr>
+            </tbody>
+            </table>
+
+            <p>See? That data was comepletely made up, but that's ok because this is a spoof article about how my laziness got the better of me. Now, the issue here is it becomes really difficult to incorporate a quote into this article. I can't simply go</p>
+            <blockquote>
+                <q>Lazy people find the simplest solutions</q>
+                <cite>-Me</cite>
+            </blockquote>
+            <p>and just get away with it...</p>
+        </section>
+        <section id="three">
+            <h2>I Hate Google Fonts</h2>
+            <p>Words cannot express how much this assignment has made me hate Google Fonts. More specifically, I hate the way Google Fonts does icons. I swear, <strong><mark>HALF</mark></strong> of the time I spent on this assignment was getting those two icons at the top of the page to work. I simply do not understand why I need to order the icons I want to use in a specific way for them to show up properly on the page. I mean seriously, I spent an hour debugging the icons alone. That's <em>ridiculous</em>. Let me show you.</p>
+
+            <p>The first code section is how the link tag is implemented now. The second is another version of that same link tag</p>
+
+<pre>
+    <code>
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,
+FILL,GRAD@24,400,0,0&icon_names=chevron_right,home" /&gt;
+    </code>
+</pre>
+<pre>
+    <code>
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,
+FILL,GRAD@24,400,0,0&icon_names=home,chevron_right" /&gt;
+    </code>
+</pre>
+
+            <p>The first link tag works. The second one doesn't... <abbr title="WHAT THE FUCK">WTF</abbr>. It makes no sense to me why the second version would not work, especially because the home icon appears before the chevron_right icon on their website. Either way, you can expect my future assignments to use minimal icons because of this. It was a massive headache.</p>
+        </section>
+        <section id="four">
+            <h2>Wrap Up</h2>
+            <p>I'm not really sure what the point of this section is. Maybe just to pad the length of this article to an acceptable length. This took a lot longer than I was hoping it would. Who could've guessed that typing out several paragraphs worth of text would take more time than copy/pasting another wikipedia article or something of the sorts. I didn't really know how to use summary, which is why it didn't show up. I know how to code it in HTML, but I'm not entirely confident on its purpose. Maybe I'll do a little more research into it, but I'm exhausted. I left a form to rate if you enjoyed the article. It doesn't actually save the data or anything, it's mainly just there for your entertainment. Have fun and thanks for reading whatever this was.</p>
+        </section>
+        <section>
+            <h2>Feedback Form</h2>
+            <form id="myForm" method="post">
+            <fieldset>
+                <legend>Totally Real Form That I Will <em>Definitely</em> Review</legend>
+                <label for="username">
+                    What is your name?
+                    <input type="text" id="username" placeholder="First Last" required>
+                </label>
+
+                <label for="email">
+                    What is your email address?
+                    <input type="email" id="email">
+                </label>
+
+                <label for="age">
+                    How old are you?
+                    <input type="number" id="age" placeholder="35">
+                </label>
+
+                <label for="phone">
+                    What is your phone number?
+                    <input type="tel" id="phone" minlength="10" placeholder="555-555-5555">
+                </label>
+
+                <label for="rating">
+                    How would you rate this article from 1-10?
+                    <input type="number" id="rating" placeholder="10">
+                </label>
+
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+        </section>
+    </main>
+</body>
+</html>
