@@ -108,7 +108,7 @@ nav ul li a:active{
 }
 
 .skip-link:focus{
-    transform: translateY(-100%);
+    transform: translateY(0%);
 }
 
 .skip-link{
