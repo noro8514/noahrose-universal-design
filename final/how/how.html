@@ -10,7 +10,7 @@
     <div class="container">
       <a class="skip-link" href="#skipTo">Skip to Main Content</a>
       <header>
-        <h1>Noah Rose</h1>
+        <h1>Universal Design</h1>
       </header>
       <nav>
         <h2 class="sr-only">Main Navigation</h2>
@@ -23,17 +23,77 @@
       </nav>
       <main>
         <section id="skipTo">
-          <h2>UNDER CONSTRUCTION</h2>
+          <h2>How to Universal Design</h2>
+
+          <p>To begin the Universal Design process, I recommend starting with what we call personas and wireframes. Personas is the practice of creating fictitious characters that you would ideally be designing the application for. Creating a fake name, backstory, and motivation can help make the designing process much more personal. It is important to not get bogged down with unnecessary details, try to stick to creating a basic outline of someone and focus on their reasons for wanting to use your website. This way, you can better understand what considerations you need to keep in mind while designing your website, whether it’s color contrast, creating skip navigation, providing audio enhancements, or even stylizing a form for better clarity. These are a few of many different design choices that may come to mind after creating a well-made persona. </p>
+        
+          <p>I recommend your next step to be creating a wireframe of your website. Being able to create low resolution models of your website will help you understand how content needs to be laid out to be the most presentable it can be. Wireframes should be quick sketches of different pages of your website. Nothing should be very detailed, and you will likely need to rapidly prototype many different versions before you land on a design you like. Wireframes go hand-in-hand with a concept in Universal Design called “mobile first”, which refers to the idea of designing your website for a mobile device first, then scaling upwards to larger screens rather than vice versa. Working with a constrained environment better helps you understand what features are crucial to your website, and which features can afford to be made invisible. Instead of designing for a large screen, which can lead to cramming and clutter when downscaling, designing for small screens means that each version of your website can offer more features than the last, while still maintaining mobile integrity.  </p>
+        
+          <p>Once you have planned out the outline of your website, I recommend your next step to be understanding line heights and font choices. Different parts of your website will benefit from different font styles, depending on the purpose they serve. Big, bold title texts will better benefit from sans serif fonts, while regular text and long paragraphs will benefit from serif fonts. Use this current page as an example. The regular text you are reading currently is a serif font, while the headers for each section and the titles are all sans serif font. In combination with font choice comes line spacing. Text that is too close together can be difficult to read, especially for those with mild vision impairments. I recommend altering the space between each line in CSS using the “line-height” variable. This webpage uses 1.5em for the line height, as well as an additional 1.8em spacing from the sides of the window. Providing extra space from the sides of the window can also provide breathing room for readers, and makes your content much more digestible. </p>
         </section>
       </main>
-      <aside id="aside1">
-        <h2>UNDER CONSTRUCTION</h2>
+      <aside id="srD">
+        <h2>Screen Reader Only Content</h2>
+        <p>After all your content is laid out, you can move on to adding accessible features for those who may not be accessing your website in the traditional manner. I recommend starting with your navigation section. Navigation tags do not inherently have any information tied to them aside from the navigation links you add within them. To make this more accessible to those with screen readers, I recommend making a class called “sr-only”, with the following variables in your CSS file.</p>
+
+        <p>This class allows you to create headers or paragraphs that will only be picked up by users using screen readers, and will be invisible to everyone else. This allows you to add context to your navigation bars, and lets visually impaired users quickly navigate your website. </p>
       </aside>
-      <aside id="aside2">
-        <h2>UNDER CONSTRUCTION</h2>
+      <aside id="srC">
+        <h2 class="sr-only">Example Screen Reader Only Content</h2>
+        <p>Add the following code to your CSS file</p>
+        <pre>
+        <code>
+    .sr-only{
+      border:0;
+      clip:rect(0,0,0,0);
+      height:1px;
+      margin:-1px;
+      overflow:hidden;
+      padding:0;
+      position:absolute;
+      white-space: nowrap;
+      width: 1px;
+      }        
+      </code>
+      </pre>
+      </aside>
+      <aside id="slD">
+        <h2>Skip Link</h2>
+        <p>Next I recommend adding a “skip link” to the beginning of each page on your website. A skip link is a feature that allows users who are using tab navigation to quickly move from the top of your website straight to the main content of your page. Without skip links, tab navigation users are required to sift through a bunch of unneeded backend content to reach your main content, and sometimes they may even miss where your main content is supposed to begin. To add a skip link, start by adding the following CSS to your stylesheet document</p>
+      
+        <p>Finally, wherever the bulk of your information begins, add an ID to the first section of text labeled “#skipTo”. What you have just created is a link at the beginning of your website that can only be viewed by tab-navigating, and once interacted with sends screen readers to the beginning of your main content. </p>
+      </aside>
+      <aside id="slC">
+        <h2 class="sr-only">Example Skip Link</h2>
+        <p>Add the following CSS</p>
+        <pre>
+        <code>
+    .sr-only{
+      border:0;
+      clip:rect(0,0,0,0);
+      height:1px;
+      margin:-1px;
+      overflow:hidden;
+      padding:0;
+      position:absolute;
+      white-space: nowrap;
+      width: 1px;}        
+      </code>
+      </pre>
+       <p>Then add the following HTML</p>
+       <pre>
+        <code>
+    &lt;a class="skip-link" href="#skipTo"&gt;
+      Skip to Main Content&lt;/a&gt;     
+      </code>
+      </pre>
+      </aside>
+      <aside id="ending">
+        <h2>Just the Beginning</h2>
+        <p>These features are a great starting point for creating accessible websites for all users. Something to note is that these features come at no cost to the typical user. They are hidden unless interacted with by tools commonly used by those with needed assistance. This is a great way to provide accessibility without making marginalized groups feel singled out or tacked on as an edge case. Rather it provides a seamless design that can be easily accessed by all users. This is the ultimate goal of Universal Design, and I would highly recommend looking into other features you can add to continue improving the accessibility of your website!</p>
       </aside>
       <footer>
-        <small>By Noah Rose for Universal Design</small>
+        <small>By Noah Rose</small>
       </footer>
   </div>
   </body>

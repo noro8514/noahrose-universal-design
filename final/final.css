@@ -1,6 +1,6 @@
 /*Add icon google font here*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 /*The nuclear launch button of css resetting*/
 *,*:before,*:after{
@@ -10,79 +10,98 @@
 }
 
 body{
-    background: #D2ADFF;
-    font-family: "Roboto", sans-serif;
+    background: #608075;
+    font-family: "Merriweather", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
 }
 
+main{
+    text-align: center;
+}
+
+#slD{
+    border-bottom: 8px #438ACC solid;
+}
+
+#srD, #slD{
+    border-top:8px #438ACC solid;
+}
+
 .container{
-    max-width: 1200px;
+    max-width: 1500px;
   margin: 0 auto;
   background: #8BFFE8;
   display: grid;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   grid-template-columns:
-   2fr       1fr       1fr;
+   1fr       1fr       1fr       1fr;
   grid-template-areas:
-  "heady     heady     heady"
-  "navvy     navvy     navvy"
-  "mainy     aside1    aside2"
-  "mainy     aside1    aside2"
-  "mainy     aside1    aside2"
-  "footy     footy     footy";
+  "head     head     head     head"
+  "nav     nav     nav     nav"
+  "main     main     main     main"
+  "foot     foot     foot     foot";
 }
 
 p{
-    line-height: 1.5em;
+    line-height: 1.7em;
     margin: 1.8em 0;
 }
 
 h1,h2,h3{
-    font-family: "Gowun Batang", serif;
-    font-weight: 700;
+    font-family: "Outfit", serif;
     font-style: normal;
     padding: 0.2em 0;
 }
 
 h1{
-    font-size: 1.7em;
+    font-size: 2em;
 }
 
 h2{
     font-size: 1.3em;
 }
 
-h3{
-    font-size: 1.2em;
-}
-
-nav ul li{
+ul li{
     list-style: none;
 }
 
-nav ul li a{
-    text-decoration: none;
-    font-size: 1.3em;
-    padding: 5px;
+main img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-nav ul li a:link{
+#reference ul li{
+    margin:10px;
+}
+
+ul li a{
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 10px;
+}
+
+ul li a:link{
     color:blue;
 }
 
-nav ul li a:visited{
+#reference ul li a:link{
+    text-decoration: underline;
+}
+
+ul li a:visited{
     color:black;
 }
 
-nav ul li a:hover{
+ul li a:hover{
     color:black;
     background:white;
 }
 
-nav ul li a:active{
+ul li a:active{
     color:coral;
 }
 
@@ -108,7 +127,7 @@ nav ul li a:active{
 }
 
 .skip-link:focus{
-    transform: translateY(-100%);
+    transform: translateY(0%);
 }
 
 .skip-link{
@@ -154,20 +173,19 @@ input:not([type="submit"]).active + .inputRequirements{
 
 header, nav, main, aside, footer{
     padding: 1.5em;
-    border: 1px black solid;
+    /* border: 2px black solid; */
 }
 
-header,
 footer {
   text-align: center;
 }
 
-header {grid-area: heady; background:#8BFFE8;}
-nav {grid-area: navvy; background:#FFC3EC;}
-main {grid-area: mainy; background: #FFCB8F; max-height: 100%;}
-#aside1 {grid-area: aside1; background: rgb(241, 202, 174);}
-#aside2 {grid-area: aside2; background: #B4FFB7;}
-footer {grid-area: footy; background: #D2DAFF;}
+
+
+header {grid-area: head; background:#309C91;}
+nav {grid-area: nav; background:#7BE9F6;}
+main {grid-area: main; background: #CAE6EB; max-height: 100%;}
+footer {grid-area: foot; background: #56B4C3;}
 
 nav ul {
     display: flex;
@@ -184,13 +202,15 @@ nav ul li {
   and (max-width: 900px)  {
 .container {
 grid-template-columns:
-   1fr 1fr;
+   1fr;
 grid-template-areas:
-  "heady heady"
-  "navvy navvy"
-  "mainy mainy"
-  "aside1 aside2"
-  "footy footy";
+  "head"
+  "nav"
+  "main"
+  "foot";
+}
+main img{
+    width:95%;
 }
 }
 
@@ -199,12 +219,10 @@ grid-template-areas:
 grid-template-columns:
    1fr;
 grid-template-areas:
-  "heady"
-  "mainy"
-  "aside1"
-  "aside2"
-  "navvy"
-  "footy";
+  "head"
+  "nav"
+  "main"
+  "foot";
 }
 nav ul {
   flex-flow: column nowrap;
@@ -215,7 +233,10 @@ nav ul li a {
   padding: 10px 5px;
   margin: 5px;
   border: 1px black solid;
-  background: white;
 
+}
+
+main img{
+    content-visibility: hidden;
 }
 }
