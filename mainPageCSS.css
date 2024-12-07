@@ -1,6 +1,6 @@
 /*Add icon google font here*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 /*The nuclear launch button of css resetting*/
 *,*:before,*:after{
@@ -11,78 +11,105 @@
 
 body{
     background: #608075;
-    font-family: "Roboto", sans-serif;
+    font-family: "Merriweather", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
 }
 
+
+#csD{
+    border-bottom: 8px #438ACC solid;
+}
+
+#ctdD, #csD{
+    border-top:8px #438ACC solid;
+}
+
+#ctdT, #csT{
+    text-align: center;
+    align-content: center;
+}
+
 .container{
-    max-width: 1200px;
+    max-width: 1500px;
   margin: 0 auto;
   background: #8BFFE8;
   display: grid;
   width: 100vw;
   height: 100vh;
   grid-template-columns:
-   1fr       2fr       1fr;
+   1fr       1fr       1fr       1fr;
   grid-template-areas:
-  "heady     heady     heady"
-  "navvy     navvy     navvy"
-  "aside1    mainy     aside2"
-  "aside1    mainy     aside2"
-  "aside1    mainy     aside2"
-  "footy     footy     footy";
+  "heady     heady     heady     heady"
+  "navvy     navvy     navvy     navvy"
+  "mainy     mainy     mainy     mePic"
+  "ctdT      ctdD      ctdD      ctdD"
+  "csD      csD      csD      csT"
+  "footy     footy     footy     footy";
+}
+
+#mePic img{
+    width:100%;
 }
 
 p{
-    line-height: 1.5em;
+    line-height: 1.7em;
     margin: 1.8em 0;
 }
 
 h1,h2,h3{
-    font-family: "Gowun Batang", serif;
-    font-weight: 700;
+    font-family: "Outfit", serif;
     font-style: normal;
     padding: 0.2em 0;
 }
 
 h1{
-    font-size: 1.7em;
+    font-size: 2em;
 }
 
 h2{
     font-size: 1.3em;
 }
 
-h3{
-    font-size: 1.2em;
-}
-
-nav ul li{
+ul li{
     list-style: none;
 }
 
-nav ul li a{
-    text-decoration: none;
-    font-size: 1.3em;
-    padding: 5px;
+main img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-nav ul li a:link{
+#reference ul li{
+    margin:10px;
+}
+
+ul li a{
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 10px;
+}
+
+ul li a:link{
     color:blue;
 }
 
-nav ul li a:visited{
+#reference ul li a:link{
+    text-decoration: underline;
+}
+
+ul li a:visited{
     color:black;
 }
 
-nav ul li a:hover{
+ul li a:hover{
     color:black;
     background:white;
 }
 
-nav ul li a:active{
+ul li a:active{
     color:coral;
 }
 
@@ -154,20 +181,24 @@ input:not([type="submit"]).active + .inputRequirements{
 
 header, nav, main, aside, footer{
     padding: 1.5em;
-    border: 1px black solid;
+    /* border: 2px black solid; */
 }
 
-header,
 footer {
   text-align: center;
 }
 
-header {grid-area: heady; background:#C4FFBE;}
-nav {grid-area: navvy; background:#FAFFA8;}
-main {grid-area: mainy; background: #8CFFAA; max-height: 100%;}
-#aside1 {grid-area: aside1; background: #C7FF8A;}
-#aside2 {grid-area: aside2; background: #9CFF91;}
-footer {grid-area: footy; background: #ADFFDE;}
+
+
+header {grid-area: heady; background:#309C91;}
+nav {grid-area: navvy; background:#7BE9F6;}
+main {grid-area: mainy; background: #CAE6EB; max-height: 100%;}
+#mePic {grid-area: mePic; background:#438ACC;}
+#ctdT {grid-area: ctdT; background:#438ACC;}
+#ctdD {grid-area: ctdD; background:#7BE9F6;}
+#csT {grid-area: csT; background:#438ACC;}
+#csD {grid-area: csD; background:#7BE9F6;}
+footer {grid-area: footy; background: #56B4C3;}
 
 nav ul {
     display: flex;
@@ -184,13 +215,19 @@ nav ul li {
   and (max-width: 900px)  {
 .container {
 grid-template-columns:
-   1fr 1fr;
+   1fr;
 grid-template-areas:
-  "heady heady"
-  "navvy navvy"
-  "mainy mainy"
-  "aside1 aside2"
-  "footy footy";
+  "heady"
+  "navvy"
+  "mainy"
+  "ctdT"
+  "ctdD"
+  "csT"
+  "csD"
+  "footy";
+}
+#mePic img{
+    content-visibility: hidden;
 }
 }
 
@@ -200,10 +237,12 @@ grid-template-columns:
    1fr;
 grid-template-areas:
   "heady"
-  "mainy"
-  "aside1"
-  "aside2"
   "navvy"
+  "mainy"
+  "ctdT"
+  "ctdD"
+  "csT"
+  "csD"
   "footy";
 }
 nav ul {
@@ -215,7 +254,10 @@ nav ul li a {
   padding: 10px 5px;
   margin: 5px;
   border: 1px black solid;
-  background: white;
 
+}
+
+#mePic img{
+    content-visibility: hidden;
 }
 }
