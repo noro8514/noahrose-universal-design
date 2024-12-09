@@ -229,6 +229,7 @@ grid-template-areas:
 #mePic img{
     content-visibility: hidden;
     width:0px;
+    padding:0;
 }
 }
 
@@ -261,5 +262,6 @@ nav ul li a {
 #mePic img{
     content-visibility: hidden;
     width:0px;
+    padding:0;
 }
 }
