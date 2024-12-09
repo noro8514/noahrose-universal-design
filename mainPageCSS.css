@@ -227,7 +227,7 @@ grid-template-areas:
   "mePic"
   "footy";
 }
-#mePic img{
+#mePic{
     content-visibility: hidden;
     width:0px;
     padding:0;
@@ -261,7 +261,7 @@ nav ul li a {
 
 }
 
-#mePic img{
+#mePic{
     content-visibility: hidden;
     width:0px;
     padding:0;
