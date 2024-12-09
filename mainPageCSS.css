@@ -224,6 +224,7 @@ grid-template-areas:
   "ctdD"
   "csT"
   "csD"
+  "mePic"
   "footy";
 }
 #mePic{
@@ -243,6 +244,7 @@ grid-template-areas:
   "ctdD"
   "csT"
   "csD"
+  "mePic"
   "footy";
 }
 nav ul {
