@@ -228,7 +228,9 @@ nav ul li a {
 
 }
 
-figure img{
+#graph img{
     content-visibility: hidden;
+    width:0px;
+    padding:0;
 }
 }
