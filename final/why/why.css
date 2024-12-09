@@ -200,7 +200,7 @@ grid-template-areas:
   "ref"
   "footy";
 }
-figure{
+#graph img{
     width:80%;
 }
 }
@@ -228,7 +228,7 @@ nav ul li a {
 
 }
 
-figure{
+figure img{
     content-visibility: hidden;
 }
 }
