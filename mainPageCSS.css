@@ -226,7 +226,7 @@ grid-template-areas:
   "csD"
   "footy";
 }
-#mePic img{
+#mePic{
     content-visibility: hidden;
 }
 }
